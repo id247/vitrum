@@ -19,6 +19,7 @@
 	&__content{	
 		position: relative;
 		z-index: 1;
+		min-height: 906px;
 	}
 
 	&__copy{
@@ -94,8 +95,14 @@
 		margin: auto;
 	}
 
+	&__content{
+		background: #fff;
+		border-radius: 25px;
+		padding: 35px 20px;
+	}
+
 	&__title{
-		margin: 0 0 40px;
+		margin: 0 0 20px;
 		font-weight: 700;
 		font-size: 36px;
 		line-height: (50/36);
@@ -220,11 +227,15 @@
 	}
 
 	&--4{
+		
+		color: #363636;
+		
 		&:before{
 			content: url(../images/home/candy.png);
-			bottom: 5px;
-			right: 20px;
+			bottom: 0px;
+			right: 15px;
 		}
+
 		.home-item{
 			&__content{
 				width: 300px;
@@ -282,74 +293,63 @@
 	}
 }
 
-/* ==========================================================================
- * app
- * ========================================================================== */
-
-.app{
-
-	&__loader{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 500;
-	}
-
-	&__error{
-		position: fixed;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 550;
-	}
-
-}
 
 /* ==========================================================================
- * error-message
+ * quiz
  * ========================================================================== */
 
-.error-message{
-	padding: 10px;
-	background: #ff7f7f;
-}
- 
 
-/* ==========================================================================
- * loader
- * ========================================================================== */
+.quiz{
+	color: #242424;
 
-.loader{
-	background: rgba(255,255,255,.5);	
-	text-align: center;
-	opacity: 0;
-	visibility: hidden;
-	
-	transition: all .2s;
-
-	display: flex;
-
-	align-items: center;
-	justify-content: center;
-	
 	&__content{
-		width: 40px;
-		height: 40px;
-		display: inline-block;
-		animation: spin .6s infinite linear;
-		text-indent: -9999px;
-		content: '';
+		background: #fff;
+		border-radius: 25px;
+		padding: 60px 120px 60px;
+		position: relative;
+		max-width: 900px;
+		margin: 0 auto;
+
+		min-height: 550px;
+
+		&:before,
+		&:after{
+			position: absolute;
+		}
+
+		&:before{
+			top: -130px;
+			right: -302px;
+			content: url(../images/quiz/bear.png);
+		}
+
+		&:after{
+			bottom: -25px;
+			left: -206px;
+			content: url(../images/quiz/can.png);
+		}
 	}
 
-	&--visible{
-		opacity: 1;
-		visibility: visible;
+	&__page{
+		
+		&--home{
+			text-align: center;
+		}
+	}
+
+	&__title{
+		text-align: center;
+		font-size: 45px;
+		color: #000;
+		font-family: $hangy;
+		font-style: italic;
+		font-weight: 700;
+		margin: 0 0 20px;
+	}
+
+	&__text{
+		text-align: center;
+		margin: 0 0 40px;
 	}
 }
 
-@keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
-}

@@ -1,0 +1,81 @@
+
+
+/* ==========================================================================
+ * app
+ * ========================================================================== */
+
+.app{
+	position: relative;
+	min-height: 70px;
+
+	&__loader{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 500;
+	}
+
+	&__error{
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 550;
+	}
+
+}
+
+/* ==========================================================================
+ * error-message
+ * ========================================================================== */
+
+.error-message{
+	padding: 10px;
+	background: #ff7f7f;
+	color: #000;
+}
+
+/* ==========================================================================
+ * app-login
+ * ========================================================================== */
+
+.app-login{
+	text-align: center;
+}
+
+/* ==========================================================================
+ * loader
+ * ========================================================================== */
+
+.loader{
+	background: rgba(255,255,255,.5);	
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	
+	transition: all .2s;
+
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+	
+	&__content{
+		width: 70px;
+		height: 70px;
+		display: inline-block;
+		animation: spin .6s infinite linear;
+	}
+
+	&--visible{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

@@ -2,20 +2,42 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-import Loading 		from '../components/loading/Loading';
-import ErrorMessage from '../components/error/ErrorMessage';
-import Login 		from '../components/pages/Login';
-import App 			from '../components/App';
-import Main 		from '../components/pages/Main';
+import Loading 			from '../components/loading/Loading';
+import ErrorMessage 	from '../components/error/ErrorMessage';
+import Login 			from '../components/login/Login';
 
-const routes = (
-	<Router history={hashHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={Main} />
-		</Route>
-		<Route path="/login" component={Login} />
-	</Router>
-);
+import App 				from '../components/App';
+import Comments 		from '../components/comments/Comments';
+
+import Quiz 			from '../components/Quiz';
+import QuizIndex 		from '../components/quiz/QuizIndex';
+import QuizQuestions 	from '../components/quiz/QuizQuestions';
+
+let routes;
+
+if (location.href.indexOf('vitrum-quiz') > -1){
+
+	routes = (
+		<Router history={hashHistory}>
+			<Route path="/" component={Quiz}>
+				<IndexRoute component={QuizIndex} />
+				<Route path="quiz" component={QuizQuestions} />
+			</Route>
+		</Router>
+	);
+
+}else{
+
+	routes = (
+		<Router history={hashHistory}>
+			<Route path="/" component={App}>
+				<IndexRoute component={Comments} />
+			</Route>
+			<Route path="/login" component={Login} mixClass="app__page" />
+		</Router>
+	);
+
+}
 
 class Root extends React.Component {
 

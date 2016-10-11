@@ -33,6 +33,28 @@ $flower-total-width: 692px;
 $flower-total-height: 371px;
 $flower-image: '../images/sprite.png';
 $flower: (0px, 284px, 0px, -284px, 87px, 87px, 692px, 371px, '../images/sprite.png', 'flower', );
+$hand-liked-name: 'hand--liked';
+$hand-liked-x: 337px;
+$hand-liked-y: 190px;
+$hand-liked-offset-x: -337px;
+$hand-liked-offset-y: -190px;
+$hand-liked-width: 19px;
+$hand-liked-height: 21px;
+$hand-liked-total-width: 692px;
+$hand-liked-total-height: 371px;
+$hand-liked-image: '../images/sprite.png';
+$hand-liked: (337px, 190px, -337px, -190px, 19px, 21px, 692px, 371px, '../images/sprite.png', 'hand--liked', );
+$hand-name: 'hand';
+$hand-x: 356px;
+$hand-y: 190px;
+$hand-offset-x: -356px;
+$hand-offset-y: -190px;
+$hand-width: 19px;
+$hand-height: 21px;
+$hand-total-width: 692px;
+$hand-total-height: 371px;
+$hand-image: '../images/sprite.png';
+$hand: (356px, 190px, -356px, -190px, 19px, 21px, 692px, 371px, '../images/sprite.png', 'hand', );
 $logo-name: 'logo';
 $logo-x: 0px;
 $logo-y: 0px;
@@ -58,7 +80,7 @@ $logotype: (0px, 232px, 0px, -232px, 148px, 52px, 692px, 371px, '../images/sprit
 $spritesheet-width: 692px;
 $spritesheet-height: 371px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($books, $flower, $logo, $logotype, );
+$spritesheet-sprites: ($books, $flower, $hand-liked, $hand, $logo, $logotype, );
 $spritesheet: (692px, 371px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*

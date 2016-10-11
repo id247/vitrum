@@ -8,10 +8,16 @@ import Root from './components/Root';
 
 const store = configureStore(); 
 
-ReactDOM.render(
-	<Root store={store} />,
-	document.getElementById('app')
-);
+const app = document.getElementById('app');
+
+if (app){
+
+	ReactDOM.render(
+		<Root store={store} />,
+		app
+	);
+
+}
 
 
 

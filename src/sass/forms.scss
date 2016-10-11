@@ -40,6 +40,7 @@
 		}
 	}
 
+	&--comments,
 	&--orange{
 		background: $orange;
 		color: #fff;
@@ -48,6 +49,20 @@
 		}
 		&:active{
 			background: darken($orange, 5%);
+		}
+	}
+
+	&--transparent-orange{
+		background: transparent;
+		border: 2px solid $orange;
+		color: #000;
+		&:hover{
+			background: $orange;
+			color: #fff;
+		}
+		&:active{
+			background: $orange;
+			color: #fff;
 		}
 	}
 
@@ -61,6 +76,13 @@
 			background: darken($green, 5%);
 		}
 	}
+
+	&--s{
+		border-radius: 20px;
+		font-size: 16px;
+		padding: 8px 15px 8px;
+	}
+
 
 	&--m{
 		border-radius: 25px;

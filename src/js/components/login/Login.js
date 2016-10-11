@@ -18,30 +18,20 @@ class Login extends React.Component {
 	render(){
 		const { props } = this;
 
+		const site = location.href.indexOf('mosreg') > -1 ? 'Школьный портал' : 'Дневник.ру';
+
 		return (
-			<div className={( (props.mixClass ? props.mixClass : '') + ' login')}>
+			<div className={( (props.mixClass ? props.mixClass : '') + ' app-login')}>
 
-				<h1 className="login__title">
-					Заголовок
-				</h1>
-
-				<div className="login__text text">
-					
-					<p>
-						Текст
-					</p>
-
-				</div>
-
-				<div className="login__button-placeholder">
+				<div className="app-login__button-placeholder">
 
 					<Button 
 						size="m"
-						color="blue-dark"
+						color="orange"
 						type="button"
 						onClickHandler={props.login}
 					>
-						Войти через Дневник.ру
+						Войти через {site}
 					</Button>
 				
 				</div>
