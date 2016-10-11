@@ -1,21 +1,35 @@
 @charset "UTF-8";
 
-// @font-face {
-//     font-family: 'font';
-//     src: url('../fonts/fonr.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'Hangyaboly';
+    src: url('../fonts/Hangyaboly.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
-$mainFontFamily: Helvetica, sans-serif;
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PT_Sans-Web-Regular.woff.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$sans: 'PT Sans';
+$hangy: 'Hangyaboly';
+$mainFontFamily: $sans, Helvetica, sans-serif;
 
 //
 //colors
 //
 
+$yellow: #f5e336;
+$orange: #ff6c00;
+$green: #428e00;
 
-$text: #1c1c1c;
+$links: #086eb6;
+$text: #7e7e7e;
 
 //
 //medias

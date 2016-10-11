@@ -6,10 +6,78 @@
 .container{
 	overflow: hidden;
 	position: relative;
+	background: #75a661 url(../images/bg/bg2.jpg) 50% 0 repeat-y;
 
 	&__section{
-		
+
 	}
+
+	&__bg{
+		min-height: 907px;				
+	}
+
+	&__content{	
+		position: relative;
+		z-index: 1;
+	}
+
+	&__copy{
+		//position: absolute;
+		//bottom: 8px;
+		//left: 0;
+		//right: 0;
+	}
+}
+
+/* ==========================================================================
+ * container-copy
+ * ========================================================================== */
+
+.container-copy{
+	background: #75a661 url(../images/bg/bottom.jpg) 50% 0 no-repeat;
+	height: image-height('../assets/images/bg/bottom.jpg');
+	text-align: center;
+	color: #7c7168;
+	padding: 65px 0 0;
+	position: relative;
+
+	&:before{
+		content: '';
+		@include sprite($flower);
+		position: absolute;
+		top: -65px;
+		left: 45%;
+	}
+
+	&:after{
+		content: '';
+		@include sprite($books);
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin: 0 0 -50px 400px;
+	}
+
+	&__content{
+		opacity: .5;
+	}
+
+	&__title{
+		font-size: 60px;
+		line-height: 60px;
+		margin: 0 0 0px;
+		text-transform: uppercase;
+
+		white-space: nowrap;
+
+		@media (max-width: 1400px){
+			font-size: 43px;
+		}
+	}
+
+	&__text{
+		font-size: 13px;
+	}	
 }
 
 /* ==========================================================================
@@ -22,16 +90,17 @@
 	&__wrap{
 		@include clearfix;
 		max-width: 1000px;
-		padding: 0 10px;
+		padding: 0 5px;
 		margin: auto;
 	}
 
 	&__title{
-		text-align: center;
 		margin: 0 0 40px;
 		font-weight: 700;
 		font-size: 36px;
 		line-height: (50/36);
+		font-family: $hangy;
+		font-style: italic;
 	}
 
 	&__text{
@@ -39,6 +108,179 @@
 	}
 }
 
+/* ==========================================================================
+ * header
+ * ========================================================================== */
+
+.header{
+	padding: 0 0 0;
+	color: #fff;
+	height: 160px;
+
+	&__wrap{
+		position: relative;
+	}
+
+	&__logo-placeholder{
+		position: absolute;
+		top: 0;
+		left: -15px;
+	}
+
+	&__logo{
+		display: block;
+		text-indent: -9999px;
+		@include sprite($logo);
+		//width: 240px;
+		//height: 135px;
+		//background: #000;
+
+		//transform: rotate(-4deg);
+	}
+
+	&__content{
+		margin: 45px 0 0 322px;
+	}
+
+	&__title{
+		text-align: left;
+		color: $yellow;
+		font-size: 48px;
+		line-height: 1;
+		margin: 0 0 0px;
+	}
+
+	&__text{
+		font-size: 33px;
+		font-family: $hangy;
+		font-style: italic;
+	}
+}
+
+/* ==========================================================================
+ * home
+ * ========================================================================== */
+
+.home{
+
+	&__list{
+		text-align: center;
+		margin: 0 -3.8% -40px; 
+	}
+
+	&__item{
+		text-align: left;
+		display: inline-block;
+		vertical-align: top;
+		width: 46%;
+		margin: 0 1.5% 40px;
+	}
+}
+
+.home-item{
+	background: #fff;
+	border-radius: 25px;
+	padding: 25px 35px 15px;
+	box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+	position: relative;
+	min-height: 276px;
+
+	&:before{
+		position: absolute;
+	}
+
+	&--1{
+		&:before{
+			content: url(../images/home/can.png);
+			bottom: 10px;
+			right: -30px;
+		}
+	}
+
+	&--2{
+		&:before{
+			content: url(../images/home/kid.png);
+			bottom: -6px;
+			right: -20px;
+		}
+	}
+
+	&--3{
+		overflow: hidden;
+		&:before{
+			content: url(../images/home/bear.png);
+			bottom: -6px;
+			right: 0px;
+		}
+		.home-item{
+			&__content{
+				width: 350px;
+			}
+		}
+	}
+
+	&--4{
+		&:before{
+			content: url(../images/home/candy.png);
+			bottom: 5px;
+			right: 20px;
+		}
+		.home-item{
+			&__content{
+				width: 300px;
+			}
+		}
+	}
+
+	&__content{
+		width: 250px;
+		position: relative;
+	}
+
+	&__title{
+		font-family: $hangy;
+		font-size: 26px;
+		font-weight: 700;
+		font-style: italic;
+		margin: 0 0 15px;
+
+		&--green{
+			color: $green;
+		}
+
+		&--orange{
+			color: $orange;
+		}
+	}
+
+	&__text{
+		font-size: 16px;
+		margin: 0 0 15px;	
+
+		p{
+			margin-bottom: .4em;
+		}	
+	}
+
+	&__list{
+		
+	}
+}
+
+.home-item-list{
+
+	&__list{
+		
+	}
+
+	&__item{
+		margin: 0 0 12px;
+	}
+
+	&__href{
+		color: $links;
+	}
+}
 
 /* ==========================================================================
  * app

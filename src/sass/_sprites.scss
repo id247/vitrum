@@ -11,22 +11,55 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$books-name: 'books';
+$books-x: 337px;
+$books-y: 0px;
+$books-offset-x: -337px;
+$books-offset-y: 0px;
+$books-width: 355px;
+$books-height: 190px;
+$books-total-width: 692px;
+$books-total-height: 371px;
+$books-image: '../images/sprite.png';
+$books: (337px, 0px, -337px, 0px, 355px, 190px, 692px, 371px, '../images/sprite.png', 'books', );
+$flower-name: 'flower';
+$flower-x: 0px;
+$flower-y: 284px;
+$flower-offset-x: 0px;
+$flower-offset-y: -284px;
+$flower-width: 87px;
+$flower-height: 87px;
+$flower-total-width: 692px;
+$flower-total-height: 371px;
+$flower-image: '../images/sprite.png';
+$flower: (0px, 284px, 0px, -284px, 87px, 87px, 692px, 371px, '../images/sprite.png', 'flower', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 0px;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-width: 337px;
+$logo-height: 232px;
+$logo-total-width: 692px;
+$logo-total-height: 371px;
+$logo-image: '../images/sprite.png';
+$logo: (0px, 0px, 0px, 0px, 337px, 232px, 692px, 371px, '../images/sprite.png', 'logo', );
 $logotype-name: 'logotype';
 $logotype-x: 0px;
-$logotype-y: 0px;
+$logotype-y: 232px;
 $logotype-offset-x: 0px;
-$logotype-offset-y: 0px;
+$logotype-offset-y: -232px;
 $logotype-width: 148px;
 $logotype-height: 52px;
-$logotype-total-width: 148px;
-$logotype-total-height: 52px;
+$logotype-total-width: 692px;
+$logotype-total-height: 371px;
 $logotype-image: '../images/sprite.png';
-$logotype: (0px, 0px, 0px, 0px, 148px, 52px, 148px, 52px, '../images/sprite.png', 'logotype', );
-$spritesheet-width: 148px;
-$spritesheet-height: 52px;
+$logotype: (0px, 232px, 0px, -232px, 148px, 52px, 692px, 371px, '../images/sprite.png', 'logotype', );
+$spritesheet-width: 692px;
+$spritesheet-height: 371px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($logotype, );
-$spritesheet: (148px, 52px, '../images/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($books, $flower, $logo, $logotype, );
+$spritesheet: (692px, 371px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables
