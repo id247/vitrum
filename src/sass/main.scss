@@ -310,11 +310,13 @@
 		max-width: 900px;
 		margin: 0 auto;
 
-		min-height: 550px;
+		min-height: 570px;
+		z-index: 1;
 
 		&:before,
 		&:after{
 			position: absolute;
+			z-index: -1;
 		}
 
 		&:before{
@@ -330,26 +332,9 @@
 		}
 	}
 
-	&__page{
-		
-		&--home{
-			text-align: center;
-		}
+	&__inner{
+		position: relative;
 	}
 
-	&__title{
-		text-align: center;
-		font-size: 45px;
-		color: #000;
-		font-family: $hangy;
-		font-style: italic;
-		font-weight: 700;
-		margin: 0 0 20px;
-	}
-
-	&__text{
-		text-align: center;
-		margin: 0 0 40px;
-	}
 }
 

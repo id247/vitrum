@@ -66,6 +66,20 @@
 		}
 	}
 
+	&--transparent-green{
+		background: transparent;
+		border: 2px solid $green;
+		color: #000;
+		&:hover{
+			background: $green;
+			color: #fff;
+		}
+		&:active{
+			background: $green;
+			color: #fff;
+		}
+	}
+
 	&--green{
 		background: $green;
 		color: #fff;

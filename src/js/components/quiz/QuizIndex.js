@@ -16,14 +16,14 @@ class QuizIndex extends React.Component {
 
 		return (
 
-			<div className="quiz__page quiz__page--home">
+			<div className="app-quiz app-quiz--home">
 
-				<h1 className="quiz__title">
+				<h1 className="app-quiz__title">
 					Тест: что Вы знаете <br/>
 					о витаминах?
 				</h1>
 
-				<div className="quiz__text text">
+				<div className="app-quiz__text text">
 					<p>	
 						Витамины очень важны для полноценной работы организма. <br/>
 						Недостаток хотя бы одного из них может стать серьёзной угрозой для нашего здоровья. Особенно актуально поддержание витаминного баланса для школьников, ведь с наступлением осени нагрузки на детский организм возрастают. 		
@@ -33,7 +33,7 @@ class QuizIndex extends React.Component {
 					</p>
 				</div>
 
-				<div className="quiz__button-placeholder">
+				<div className="app-quiz__button-placeholder">
 
 					<Button 
 						size="m"
