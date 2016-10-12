@@ -71,7 +71,7 @@ class Comment extends React.Component {
 								value.user.id === props.profile.id_str
 							);
 
-		let likesText = 'Хороший комментарий';
+		let likesText = 'Хороший совет';
 
 		//console.log(comment.UserId.toString());
 		//console.log(comment.UserId);
@@ -117,11 +117,11 @@ class Comment extends React.Component {
 
 					<div className="comment__bottom">
 
-						{/*<CommentLikes 
+						<CommentLikes 
 							counter={comment.counter}
 							text={likesText}
 							clickHandler={this._voteHandler()}
-						/>*/}
+						/>
 
 						<CommentQuoteButton 
 							visible={true}

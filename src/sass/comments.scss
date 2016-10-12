@@ -11,13 +11,12 @@ $comments-text-grey: #a2a2a2;
  * ========================================================================== */
 
 .comments-likes{
-	
 
 	&--liked{
 
-		.likes__button{
+		.comments-likes__button{
 			cursor: default;
-			//color: $blue-middle;
+			color: #527ac2;
 			&:before{
 				@include sprite($hand-liked);
 			}

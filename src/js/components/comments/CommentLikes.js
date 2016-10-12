@@ -3,7 +3,7 @@ import React from 'react';
 const CommentLikes = (props) => {
 
 	const counter = props.counter ? props.counter : false;
-	const value = counter ? props.counter.Value : 0;
+	const value = counter ? props.counter.Value : '';
 
 	return (
 		<div className={('comment__likes comments-likes ' + (counter && counter.Liked ? 'comments-likes--liked' : ''))}>
