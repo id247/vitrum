@@ -439,7 +439,7 @@ class QuizQuestions extends React.Component {
 
 		const title = points > 0 
 				? 'Верно!'
-				: 'Не верно'
+				: 'Неверно.'
 				;
 
 		return (
