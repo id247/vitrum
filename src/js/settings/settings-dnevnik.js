@@ -1,9 +1,9 @@
 export const OAuthOptions = {
-	provider: 'app',
+	provider: 'vitrumDnevnik',
 	authUrl: 'https://login.dnevnik.ru/oauth2',
 	grantUrl: 'https://api.dnevnik.ru/v1/authorizations',
-	scope: 'Avatar,FullName,Birthday,Age,Roles,Files,Sex',	
-	clientId: '7d0d92280bd34aa9a5afec1c749bf0e1',
+	scope: 'Avatar,FullName,Roles,Files',	
+	clientId: 'fa9ac37c81074b5398f1ba061c1c367a',
 	redirectUrl: 'https://ad.dnevnik.ru/promo/oauth2',
 }
 
@@ -12,17 +12,12 @@ export const APIoptions = {
 }
 
 export const PromoOptions = {	
-	url: 'https://ad.dnenvik.ru/promo/vitrum',
+	url: 'https://ad.dnevnik.ru/promo/vitrum',
 	server: 'https://dnevnik.ru',
 }
 
-export const ForumOptions = {	
-	pageSize: 15,
-	psyhoId: '1000005449055',
+export const CommentsOptions = {	
+	pageSize: 5,
+	adminId: ['1111111111111111'],
 	anonAvatar: 'https://static.dnevnik.ru/images/avatars/user/a.m.jpg',
-	postsLabel: {
-		mothers: 'forum-mothers',
-		girls: 'forum-girls',
-		competition: 'competition-mothers',
-	},
 }
