@@ -464,7 +464,7 @@ class QuizQuestions extends React.Component {
 						type="button"
 						onClickHandler={this._nextQuestionHandler()}
 					>
-						<span className="button__text">Продожить</span>
+						<span className="button__text">Продолжить</span>
 					</Button>
 
 				</div>	
