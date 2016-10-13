@@ -27,6 +27,11 @@
 		//bottom: 8px;
 		//left: 0;
 		//right: 0;
+		//
+		
+		&--bottom{
+			position: relative
+		}
 	}
 }
 
@@ -38,7 +43,6 @@
 	background: #75a661 url(../images/bg/bottom.jpg) 50% 0 no-repeat;
 	height: image-height('../assets/images/bg/bottom.jpg');
 	text-align: center;
-	color: #7c7168;
 	padding: 65px 0 0;
 	position: relative;
 
@@ -60,7 +64,50 @@
 	}
 
 	&__content{
-		opacity: .5;
+		padding: 65px 0 0;
+		position: relative;
+	}
+
+	&__fly{
+		color: #aaa;
+		background: rgba(255,255,255,.5);
+
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0px;
+		padding: 10px;
+		z-index: 500;
+
+		transition: all .2s;
+		
+		&--bottom{
+			opacity: .5;
+			padding: 0;
+			position: absolute;
+			top: 0px;
+			bottom: auto;
+			background: none;
+			color: #7c7168;
+
+			.container-copy__close{
+				display: none;
+			}
+		}		
+	}
+
+	&__close{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		margin: auto;
+		width: 30px;
+		height: 30px;
+		background: none;
+		font-family: Arial;
+		font-weight: 400;
+		font-size: 40px;
+		color: inherit;
 	}
 
 	&__title{
@@ -77,6 +124,7 @@
 	}
 
 	&__text{
+		opacity: .5;
 		font-size: 13px;
 	}	
 }
@@ -99,6 +147,10 @@
 		background: #fff;
 		border-radius: 25px;
 		padding: 35px 20px;
+	}
+
+	&__back-placeholder{
+		margin: 0 0 20px;
 	}
 
 	&__title{
@@ -248,6 +300,10 @@
 		position: relative;
 	}
 
+	&__content-inner{
+		min-height: 146px;
+	}
+
 	&__title{
 		font-family: $hangy;
 		font-size: 26px;
@@ -338,3 +394,36 @@
 
 }
 
+/* ==========================================================================
+ * competition
+ * ========================================================================== */
+
+.competition{
+
+	&__content{
+		position: relative;
+
+		&:after{
+			position: absolute;
+			top: -80px;
+			right: -180px;
+			content: url(../images/quiz/can.png);
+		}
+		
+	}
+
+	&__inner{
+		position: relative;
+	}
+
+	&__text{
+		width: 800px;
+		margin: 0 0 0;
+	}
+
+	&__rules{
+		text-align: right;
+		font-size: 14px;
+		margin: 0 0 20px
+	}
+}

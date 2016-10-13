@@ -19,5 +19,6 @@ if (app){
 
 }
 
+import fly from './fly';
 
 
