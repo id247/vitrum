@@ -361,7 +361,7 @@
 	&__content{
 		background: #fff;
 		border-radius: 25px;
-		padding: 60px 120px 60px;
+		padding: 80px 120px 50px;
 		position: relative;
 		max-width: 900px;
 		margin: 0 auto;
@@ -386,6 +386,13 @@
 			left: -206px;
 			content: url(../images/quiz/can.png);
 		}
+	}
+
+	&__back{
+		position: absolute;
+		top: 30px;
+		left: 20px;
+		color: $text;
 	}
 
 	&__inner{
