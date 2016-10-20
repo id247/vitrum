@@ -38,6 +38,7 @@ export const APIoptions = {
 export const PromoOptions = {	
 	url: 'https://ad.dnenvik.ru/promo/hidden-forum',
 	server: 'https://dnevnik.ru',
+	endQuizLink: 'https://wiki.dnevnik.ru/view.aspx?network=1000000386504&pageTitle=%u041a%u0430%u043a%u0438%u0435%20%u0432%u0438%u0442%u0430%u043c%u0438%u043d%u044b%20%u043d%u0443%u0436%u043d%u044b%20%u0448%u043a%u043e%u043b%u044c%u043d%u0438%u043a%u0443',
 }
 
 export const ForumOptions = {	
