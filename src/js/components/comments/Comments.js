@@ -17,7 +17,11 @@ class Comments extends React.Component {
 
 		this._setLabel();
 
-		props.getComments();
+		const pageNumber = props.params.pageNumber ? parseInt(props.params.pageNumber) : 1;
+
+		console.log(props.params);
+
+		props.getComments(pageNumber);
 	}
 
 	_setLabel(){
@@ -37,12 +41,14 @@ class Comments extends React.Component {
 	
 	componentWillReceiveProps(nextProps){
 
+		console.log(nextProps.params);
+
 		const { props } = this;
-		const oldPageNumber = props.pageNumber ? parseInt(props.pageNumber) : 1;
-		const newPageNumber = nextProps.pageNumber ? parseInt(nextProps.pageNumber) : 1;
+		const oldPageNumber = props.params.pageNumber ? parseInt(props.params.pageNumber) : 1;
+		const newPageNumber = nextProps.params.pageNumber ? parseInt(nextProps.params.pageNumber) : 1;
 
 		if (oldPageNumber !== newPageNumber){
-			props.getComments();
+			props.getComments(newPageNumber);
 		}
 	}
 
@@ -69,6 +75,7 @@ class Comments extends React.Component {
 				
 				<Pagination
 					mixClass="comments__pagination"
+					pageNumber={parseInt(props.params.pageNumber)}
 					pagesCount={pagesCount}
 				/>
 			</div>
@@ -84,7 +91,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
 	setCommentsLabel: (label) => dispatch(commentsActions.setLabel(label)),
-	getComments: () => dispatch(asyncActions.getComments()),
+	getComments: (pageNumber) => dispatch(asyncActions.getComments(pageNumber)),
 });
 
 Comments.propTypes = {

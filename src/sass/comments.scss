@@ -84,6 +84,7 @@ $comments-text-grey: #a2a2a2;
 	}
 
 	&__href{
+		@extend .link;
 		font-size: 22px;
 		font-weight: 300;
 		//border: 1px solid $blue-middle;

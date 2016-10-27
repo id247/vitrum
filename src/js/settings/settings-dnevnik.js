@@ -18,7 +18,7 @@ export const PromoOptions = {
 }
 
 export const CommentsOptions = {	
-	pageSize: 5,
+	pageSize: 15,
 	adminId: ['1111111111111111'],
 	anonAvatar: 'https://static.dnevnik.ru/images/avatars/user/a.m.jpg',
 }

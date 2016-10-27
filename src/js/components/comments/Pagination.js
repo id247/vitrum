@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux';
 
 import * as asyncActions from '../../actions/async';
+import * as visual from '../../helpers/visual.js';
 
 const Pagination = (props) => {
 
@@ -10,34 +10,27 @@ const Pagination = (props) => {
 		return null;
 	}
 
+	const pageNumber = props.pageNumber > 1 ? props.pageNumber : 1;
+	const scrollTo = document.querySelector('#app');
+
 	return(
 		<div className={( (props.mixClass ? props.mixClass : '') + ' comments-pagination')}>
 
 			<div className="comments-pagination__title">
-				Страницы комментариев:
+				Страницы советов:
 			</div>
 
 			<ul className="comments-pagination__list">
 
-				{[,...Array(props.pagesCount)].map( (value, i)  => {
-
-					let link = '/page/' + (i);
-
-					if (i === 1){
-						link = '';
-					}
-
-					return (
+				{[,...Array(props.pagesCount)].map( (value, i)  => (
 
 					<li className="comments-pagination__item" key={i}>
 
 						<a 
 							href={ i > 1 ? ('#/page/' + i) : '#/'} 
-							className={('comments-pagination__href ' + (i === props.page ? 'comments-pagination__href--active' : '') )}
-							onClick={ (e) => {
-								e.preventDefault();
-								const pageId = i;
-								props.setCommentsPage(pageId);
+							className={('comments-pagination__href ' + (i === pageNumber ? 'comments-pagination__href--active' : '') )}
+							onClick={(e)=>{
+								visual.scrollTo(document.body, scrollTo, 200);
 							}}
 						>
 							{i}
@@ -45,8 +38,7 @@ const Pagination = (props) => {
 
 					</li>
 
-					);
-				})}
+				))}
 
 			</ul>
 
@@ -54,17 +46,10 @@ const Pagination = (props) => {
 	)
 };
 
-const mapStateToProps = (state, ownProps) => ({
-	page: state.comments.page,
-});
-
-const mapDispatchToProps = (dispatch, ownProps) => ({
-	setCommentsPage: (pageId) => dispatch(asyncActions.setCommentsPage(pageId)),
-});
-
 Pagination.propTypes = {
 	mixClass: React.PropTypes.string,
 	pagesCount: React.PropTypes.number.isRequired,
+	pageNumber: React.PropTypes.number,
 //	Array: React.PropTypes.array.isRequired,
 //	Bool: React.PropTypes.bool.isRequired,
 //	Func: React.PropTypes.func.isRequired,
@@ -74,4 +59,4 @@ Pagination.propTypes = {
 //	Symbol: React.PropTypes.symbol.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Pagination);
+export default Pagination;

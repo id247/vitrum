@@ -149,14 +149,14 @@ export function commentAdded() {
 	}
 }
 
-export function getComments() {
+export function getComments(pageNumber = 1) {
 
-	console.log('get comments');
+	console.log('get comments ' + pageNumber);
 
 	return (dispatch, getState) => {
 		dispatch(loadingActions.loadingShow());	
 
-		const pageNumber = getState().comments ? getState().comments.page : 1;
+		//const pageNumber = getState().comments ? getState().comments.page : 1;
 		const label = getState().comments ? getState().comments.label : 'comments';
 
 		let comments;
@@ -192,7 +192,7 @@ export function getComments() {
 		})
 		.then( results => {
 
-			console.log(results);
+			//console.log(results);
 
 			const counters = results.reduce( (prev, res) => {
 				return [...prev, ...res.Counters];
@@ -386,7 +386,7 @@ export function addQuote(quote) {
 	return dispatch => {
 
 		dispatch(commentsFormActions.addQuote(quote)); 
-		visual.scrollTo(document.body, document.querySelector('.comments'), 600);
+		visual.scrollTo(document.body, document.querySelector('#app'), 600);
 
 	}
 }
@@ -400,7 +400,7 @@ export function setCommentsPage(pageId) {
 
 		if (getState().comments && getState().comments.page !== pageId){
 			dispatch(commentsActions.setPage(pageId)); 
-			visual.scrollTo(document.body, document.querySelector('.comments'), 200);
+			visual.scrollTo(document.body, document.querySelector('#app'), 200);
 		}	
 		
 	}
@@ -468,7 +468,7 @@ export function getInitialData() {
 			dispatch(loadingActions.loadingHide());
 
 			dispatch(userActions.userSet(user));
-			dispatch(pageActions.setPageWithoutHistory('/'));
+			//dispatch(pageActions.setPageWithoutHistory('/'));
 		})
 		.catch( err => { 
 			dispatch(loadingActions.loadingHide());

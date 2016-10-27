@@ -32,6 +32,7 @@ if (location.href.indexOf('vitrum-quiz') > -1){
 		<Router history={hashHistory}>
 			<Route path="/" component={App}>
 				<IndexRoute component={Comments} />
+				<Route path="page/:pageNumber" component={Comments} />
 			</Route>
 			<Route path="/login" component={Login} mixClass="app__page" />
 		</Router>
