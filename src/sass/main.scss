@@ -337,11 +337,13 @@
 .home-item-list{
 
 	&__list{
-		
+		list-style-type: disc;
+		padding: 0 0 0 0px;
 	}
 
 	&__item{
 		margin: 0 0 12px;
+
 	}
 
 	&__href{
